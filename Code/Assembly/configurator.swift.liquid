@@ -1,0 +1,38 @@
+//
+//  {{ prefix }}{{ module_info.name }}{{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import UIKit
+
+class {{ module_info.name }}ModuleConfigurator {
+
+    // MARK: Iternal Helpers
+
+    func configureModuleForViewInput<UIViewController>(viewInput: UIViewController) {
+        if let viewController = viewInput as? {{ module_info.name }}ViewController {
+            configure(viewController)
+        }
+    }
+
+    // MARK: Private helpers
+
+    private func configure(viewController: {{ module_info.name }}ViewController) {
+
+        let router = {{ module_info.name }}Router()
+        let presenter = {{ module_info.name }}Presenter()
+        let interactor = {{ module_info.name }}Interactor()
+
+        presenter.view = viewController
+        presenter.router = router
+        presenter.interactor = interactor
+
+        interactor.output = presenter
+
+        viewController.output = presenter
+    }
+
+}
