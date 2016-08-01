@@ -1,6 +1,6 @@
 # Template information section
 name: "swift_viper_modlue"
-summary: "Based on the work of swifty_viper author Valeriy Popov."
+summary: "Based on the work of swifty_viper author Valeriy Popov https://github.com/rambler-ios/generamba-catalog/blob/master/swifty_viper"
 author: "Ivan Smetanin"
 version: "0.0.1"
 license: "MIT"
