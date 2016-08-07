@@ -1,0 +1,38 @@
+//
+//  {{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import Foundation
+
+class {{ module_info.name }}ServiceImpl: {{ module_info.name }}Service {
+    
+    // MARK: Constants
+    
+    private let networkDataProvider: {{ module_info.name }}DataProvider
+    
+    private let offlineDataProvider: {{ module_info.name }}DataProvider
+    
+    private let persistenceWriter: {{ module_info.name }}PersistenceWriter
+    
+    
+    // MARK: Initialization and deinitialization
+    
+    init(networkDataProvider: {{ module_info.name }}DataProvider, offlineDataProvider: {{ module_info.name }}DataProvider, persistenceWriter: {{ module_info.name }}PersistenceWriter) {
+        self.networkDataProvider = networkDataProvider
+        self.offlineDataProvider = offlineDataProvider
+        self.persistenceWriter = persistenceWriter
+    }
+    
+    // MARK: {{ module_info.name }}Service
+    
+    <#code#>
+
+    // MARK: Private helpers
+    
+    <#code#>
+
+}

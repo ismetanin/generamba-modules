@@ -1,0 +1,29 @@
+# Template information section
+name: "swift_service_modlue"
+summary: "Swift service module"
+author: "Ivan Smetanin"
+version: "0.0.1"
+license: "MIT"
+
+# The declarations for code files
+
+code_files:
+# Module
+- {name: DAO.swift,  path: Code/dao.swift.liquid}
+- {name: DataProvider.swift, path: Code/data_provider.swift.liquid}
+- {name: MapperImpl.swift, path: Code/mapper_impl.swift.liquid}
+- {name: Mapper.swift,  path: Code/mapper.swift.liquid}
+- {name: NetworkDataProvider.swift, path: Code/network_data_provider.swift.liquid}
+- {name: NetworkDataProviderAssembly.swift,  path: Code/network_data_provider_assembly.swift.liquid}
+- {name: NetworkDataProviderAssemblyImpl.swift, path: Code/network_data_provider_assembly_impl.swift.liquid}
+- {name: OfflineDataProvider.swift, path: Code/offline_data_provider.swift.liquid}
+- {name: PersistenceWriter.swift,  path: Code/persistence_writer.swift.liquid}
+- {name: PersistenceWriterImpl.swift, path: Code/persistence_writer_impl.swift.liquid}
+- {name: Request.swift, path: Code/request.swift.liquid}
+- {name: ServiceAssembly.swift, path: Code/service_assembly.swift.liquid}
+- {name: ServiceAssemblyImpl.swift, path: Code/service_assembly_impl.swift.liquid}
+- {name: Service.swift, path: Code/service.swift.liquid}
+- {name: ServiceImpl.swift, path: Code/service_impl.swift.liquid}
+
+# The declarations for test files
+test_files:

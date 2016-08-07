@@ -1,0 +1,20 @@
+//
+//  {{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import Foundation
+
+class {{ module_info.name }}PersistenceWriterImpl: {{ module_info.name }}DAO, {{ module_info.name }}PersistenceWriter {
+    
+    func createOrUpdate{{ module_info.name }}s(items: [{{ module_info.name }}]) {
+        createOrUpdate(items)
+    }
+    
+    func delete{{ module_info.name }}s(items: [{{ module_info.name }}]) {
+        delete(items)
+    }
+}

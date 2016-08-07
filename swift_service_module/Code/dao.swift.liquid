@@ -1,0 +1,30 @@
+//
+//  {{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import Foundation
+
+class {{ module_info.name }}DAO: DAO {
+    
+    //MARK: DAO
+    
+    var sortField: String? { return nil }
+    
+    var ascending: Bool { return false }
+    
+    func toEntity(entry: {{ module_info.name }}Entry) -> {{ module_info.name }} {
+        <#code#>
+        return {{ module_info.name }}()
+    }
+    
+    func toEntry(entity: {{ module_info.name }}) -> {{ module_info.name }}Entry {
+        let entry = {{ module_info.name }}Entry()
+        // MARK: Code...
+        return entry
+    }
+    
+}

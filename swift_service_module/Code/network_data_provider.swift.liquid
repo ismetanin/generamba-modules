@@ -1,0 +1,37 @@
+//
+//  {{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import Foundation
+
+class {{ module_info.name }}NetworkDataProvider: {{ module_info.name }}DataProvider {
+    
+    // MARK: {{ module_info.name }} 
+    
+    let transport: Transport
+    
+    let deserializer: Deserializer
+    
+    let mapper: {{ module_info.name }}Mapper
+    
+    // MARK: Initialization and deinitialization
+    
+    init(transport: Transport, deserializer: Deserializer, mapper: {{ module_info.name }}Mapper) {
+        self.transport = transport
+        self.deserializer = deserializer
+        self.mapper = mapper
+    }
+    
+    // MARK: {{ module_info.name }}DataProvider
+
+    <#code#>
+    
+    // MARK: Private helpers
+    
+    <#code#>
+
+}

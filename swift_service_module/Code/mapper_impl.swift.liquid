@@ -1,0 +1,20 @@
+//
+//  {{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import Foundation
+
+class {{ module_info.name }}MapperImpl: MapperImpl, {{ module_info.name }}Mapper {
+    func map(modelDictionary: ModelDictionary) throws -> {{ module_info.name }} {
+        <#code#>
+        return {{ module_info.name }}()
+    }
+    
+    func mapAll(modelDictionaries: [ModelDictionary]) throws -> [{{ module_info.name }}] {
+        return try modelDictionaries.map { try map($0) }
+    }
+}

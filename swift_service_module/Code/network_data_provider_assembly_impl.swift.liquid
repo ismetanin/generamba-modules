@@ -1,0 +1,27 @@
+//
+//  {{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import Foundation
+
+class {{ module_info.name }}NetworkDataProviderAssemblyImpl: {{ module_info.name }}NetworkDataProviderAssembly {
+    static func networkDataProvider() -> {{ module_info.name }}DataProvider {
+        return {{ module_info.name }}NetworkDataProvider(transport: transport(), deserializer: deserializer(), mapper: mapper())
+    }
+    
+    private static func transport() -> Transport {
+        return TransportImpl()
+    }
+    
+    private static func deserializer() -> Deserializer {
+        return JSONDeserializer()
+    }
+    
+    private static func mapper() -> {{ module_info.name }}Mapper {
+        return <#code#>
+    }
+}

@@ -1,0 +1,28 @@
+//
+//  {{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import Foundation
+
+class {{ module_info.name }}ServiceAssemblyImpl: {{ module_info.name }}ServiceAssembly {
+    
+    static func service() -> {{ module_info.name }}Service {
+        return {{ module_info.name }}ServiceImpl(networkDataProvider: networkDataProvider(), offlineDataProvider: offlineDataProvider(), persistenceWriter: persistenceWriter())
+    }
+    
+    private static func networkDataProvider() -> {{ module_info.name }}DataProvider {
+        return {{ module_info.name }}NetworkDataProviderAssemblyImpl.networkDataProvider()
+    }
+    
+    private static func offlineDataProvider() -> {{ module_info.name }}DataProvider {
+        return {{ module_info.name }}OfflineDataProvider(<#params#>)
+    }
+    
+    private static func persistenceWriter() -> {{ module_info.name }}PersistenceWriter {
+        return {{ module_info.name }}PersistenceWriterImpl(<#params#>)
+    }
+}

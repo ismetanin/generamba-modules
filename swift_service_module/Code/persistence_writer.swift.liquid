@@ -1,0 +1,14 @@
+//
+//  {{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import Foundation
+
+protocol {{ module_info.name }}PersistenceWriter {
+    func createOrUpdate{{ module_info.name }}s(items: [{{ module_info.name }}])
+    func delete{{ module_info.name }}s(items: [{{ module_info.name }}])
+}
