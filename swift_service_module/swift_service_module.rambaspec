@@ -27,3 +27,5 @@ code_files:
 
 # The declarations for test files
 test_files:
+#Module
+- {name: MapperTests.swift, path: Tests/Mapper/mapper_tests.swift.liquid}
