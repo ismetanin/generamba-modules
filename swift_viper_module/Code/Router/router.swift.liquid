@@ -8,4 +8,13 @@
 
 class {{ module_info.name }}Router: {{ module_info.name }}RouterInput {
 
+	// MARK: Properties
+    
+    weak var viewController: ViperModuleTransitionHandler?
+
+    // MARK: {{ module_info.name }}RouterInput
+    
+    func openModule(withId id: Int) {
+
+    }
 }

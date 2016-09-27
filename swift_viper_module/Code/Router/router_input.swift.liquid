@@ -10,4 +10,9 @@ import Foundation
 
 protocol {{ module_info.name }}RouterInput {
 
+	/** Method for transition to other module
+     - parameter id: data identifier
+     */
+    
+    func openModule(withId id: Int)
 }

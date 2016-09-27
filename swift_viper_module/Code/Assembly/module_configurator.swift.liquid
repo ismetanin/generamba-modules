@@ -12,9 +12,9 @@ class {{ module_info.name }}ModuleConfigurator {
 
     // MARK: Iternal Helpers
 
-    func configureModuleForViewInput<UIViewController>(viewInput: UIViewController) {
+    func configureModule<UIViewController>(forViewInput viewInput: UIViewController) {
         if let viewController = viewInput as? {{ module_info.name }}ViewController {
-            configure(viewController)
+            configure(viewController: viewController)
         }
     }
 

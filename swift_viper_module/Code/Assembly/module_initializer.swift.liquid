@@ -11,7 +11,7 @@ import UIKit
 class {{ module_info.name }}ModuleInitializer: NSObject {
 
 	// MARK: IBOutlets
-    // FIXME: Connect with object on storyboard
+    <#Connect with object on storyboard#>
     @IBOutlet weak var {{ module_info.name | downcase }}ViewController: {{ module_info.name }}ViewController!
 
     // MARK: NSObject UIKit Additions
@@ -19,7 +19,7 @@ class {{ module_info.name }}ModuleInitializer: NSObject {
     override func awakeFromNib() {
 
         let configurator = {{ module_info.name }}ModuleConfigurator()
-        configurator.configureModuleForViewInput({{ module_info.name | downcase }}ViewController)
+        configurator.configureModule(forViewInput: {{ module_info.name | downcase }}ViewController)
     }
 
 }

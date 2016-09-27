@@ -8,4 +8,9 @@
 
 protocol {{ module_info.name }}ModuleInput: class {
 
+	/** Method for configure module
+     - parameter id: data identifier
+     */
+    func configureModule(withId id: Int)
+
 }

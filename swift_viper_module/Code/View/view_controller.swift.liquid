@@ -10,6 +10,8 @@ import UIKit
 
 class {{ module_info.name }}ViewController: UIViewController, {{module_info.name}}ViewInput {
 
+	// MARK: Properties
+	
     var output: {{ module_info.name }}ViewOutput!
 
     // MARK: UIViewController
@@ -19,9 +21,13 @@ class {{ module_info.name }}ViewController: UIViewController, {{module_info.name
         output.setupView()
     }
 
-
     // MARK: {{module_info.name}}ViewInput
+
     func setupInitialState() {
     
+    }
+
+    func showTitle(_ title: String) {
+        self.title = title
     }
 }
