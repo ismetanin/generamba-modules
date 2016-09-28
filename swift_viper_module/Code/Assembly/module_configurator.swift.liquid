@@ -29,9 +29,7 @@ class {{ module_info.name }}ModuleConfigurator {
         presenter.view = viewController
         presenter.router = router
         presenter.interactor = interactor
-
         interactor.output = presenter
-
         viewController.output = presenter
     }
 
