@@ -17,7 +17,6 @@ class {{ module_info.name }}ModuleInitializer: NSObject {
     // MARK: NSObject UIKit Additions
     
     override func awakeFromNib() {
-
         let configurator = {{ module_info.name }}ModuleConfigurator()
         configurator.configureModule(forViewInput: {{ module_info.name | downcase }}ViewController)
     }
