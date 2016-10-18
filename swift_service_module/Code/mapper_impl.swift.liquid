@@ -15,6 +15,6 @@ class {{ module_info.name }}MapperImpl: MapperImpl, {{ module_info.name }}Mapper
     }
     
     func mapAll(modelDictionaries: [ModelDictionary]) throws -> [{{ module_info.name }}] {
-        return try modelDictionaries.map { try map($0) }
+        return try modelDictionaries.map { try map(modelDictionary: $0) }
     }
 }
