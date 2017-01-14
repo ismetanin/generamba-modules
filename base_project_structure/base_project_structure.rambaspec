@@ -1,0 +1,37 @@
+# Template information section
+name: "base_project_structure"
+summary: "Base project structure for iOS projects"
+author: "Ivan Smetanin"
+version: "0.0.1"
+license: "MIT"
+
+# The declarations for code files
+
+#code_files:
+
+# Classes
+- {name: Classes/Application}
+- {name: Classes/BusinessLogic}
+- {name: Classes/Model}
+- {name: Classes/Presentation}
+- {name: Classes/Utils}
+
+# Business logic
+- {name: Classes/BusinessLogic/Common}
+
+# Model
+- {name: Classes/Model/Common}
+- {name: Classes/Model/Entity}
+- {name: Classes/Model/Entry}
+
+# Presentation
+- {name: Classes/Presentation/Common}
+- {name: Classes/Presentation/UserStories}
+
+# Utils
+- {name: Classes/Utils/Extensions}
+
+# Resources
+- {name: Classes/Recources/Assets}
+- {name: Classes/SupporingFiles}
+
