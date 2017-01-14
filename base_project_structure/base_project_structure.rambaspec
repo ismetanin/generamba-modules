@@ -35,3 +35,5 @@ code_files:
 - {name: Classes/Recources/Assets}
 - {name: Classes/SupporingFiles}
 
+# The declarations for test files
+test_files:
