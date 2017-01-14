@@ -1,5 +1,5 @@
 # Template information section
-name: "swift_service_modlue"
+name: "swift_service_module"
 summary: "Swift service module"
 author: "Ivan Smetanin"
 version: "0.0.1"
@@ -25,7 +25,9 @@ code_files:
 - {name: Service.swift, path: Code/service.swift.liquid}
 - {name: ServiceImpl.swift, path: Code/service_impl.swift.liquid}
 
+
 # The declarations for test files
+
 test_files:
 #Module
 - {name: MapperTests.swift, path: Tests/Mapper/mapper_tests.swift.liquid}

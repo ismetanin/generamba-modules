@@ -32,8 +32,10 @@ code_files:
 - {name: Classes/Utils/Extensions}
 
 # Resources
-- {name: Classes/Recources/Assets}
-- {name: Classes/SupporingFiles}
+- {name: Resources/Assets}
+
+# SupportingFiles
+- {name: SupportingFiles}
 
 # The declarations for test files
 test_files:
