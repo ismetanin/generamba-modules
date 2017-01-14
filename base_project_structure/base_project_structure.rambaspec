@@ -7,7 +7,7 @@ license: "MIT"
 
 # The declarations for code files
 
-#code_files:
+code_files:
 
 # Classes
 - {name: Classes/Application}
