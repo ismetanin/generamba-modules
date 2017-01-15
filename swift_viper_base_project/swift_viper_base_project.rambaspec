@@ -53,10 +53,10 @@ code_files:
 - {name: Classes/Presentation/Common/Viper/ViperModuleOutput.swift, path: Code/Viper/ViperModuleOutput.swift.liquid}
 - {name: Classes/Presentation/Common/Viper/ViperModuleTransitionHandler.swift, path: Code/Viper/ViperModuleTransitionHandler.swift.liquid}
 - {name: Classes/Presentation/Common/Viper/ViperModuleViewController.swift, path: Code/Viper/ViperModuleViewController.swift.liquid}
-- {name: Classes/Presentation/Common/Viper/ViperModuleViewInput.swift, path: Code/Resources/ViperModuleViewInput.swift.liquid}
+- {name: Classes/Presentation/Common/Viper/ViperModuleViewInput.swift, path: Code/Viper/ViperModuleViewInput.swift.liquid}
 
 # Resources
-- {name: Resources/Colors/ViperModuleConfigurationBlockHolder.swift, path: Resources/Colors/Colors.swift.liquid}
+- {name: Resources/Colors/ViperModuleConfigurationBlockHolder.swift, path: Code/Resources/Colors.swift.liquid}
 
 # The declarations for test files
 test_files:
