@@ -1,0 +1,26 @@
+//
+//  ViperModuleViewController.swift
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import UIKit
+
+class ViperModuleViewController: ViewController, ViperModuleTransitionHandler {
+    
+    var moduleInput: ViperModuleInput?
+    var moduleOutput: ViperModuleOutput?
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let configBlock = (sender as? ViperModuleConfigurationBlockHolder)?.configurationBlock,
+            let moduleInput = (segue.destination as? ViperModuleTransitionHandler)?.moduleInput
+        else {
+            return
+        }
+        if let out = configBlock(moduleInput) {
+            moduleInput.setModuleOutput(moduleOutput: out)
+        }
+    }
+}

@@ -1,0 +1,22 @@
+//
+//  ViperModuleTransitionHandler.swift
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import UIKit
+
+protocol ViperModuleTransitionHandler: class {
+    weak var moduleInput: ViperModuleInput? { get set }
+    weak var moduleOutput: ViperModuleOutput? { get set }
+    func openModule(_ segueIdentifier: String, configurationBlock: ConfigurationBlock?)
+}
+
+extension ViperModuleTransitionHandler where Self: UIViewController {
+    func openModule(_ segueIdentifier: String, configurationBlock: ConfigurationBlock?) {
+        let configurationBlockHolder = ViperModuleConfigurationBlockHolder(configurationBlock: configurationBlock)
+        performSegue(withIdentifier: segueIdentifier, sender: configurationBlockHolder)
+    }
+}

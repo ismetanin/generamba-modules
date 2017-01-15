@@ -1,0 +1,62 @@
+# Template information section
+name: "swift_viper_base_project"
+summary: "Base Viper project structure with base protocols and classes"
+author: "Ivan Smetanin"
+version: "0.0.1"
+license: "MIT"
+
+# The declarations for code files
+
+code_files:
+
+#
+# Folders
+#
+
+# Classes
+- {name: Classes/Application}
+- {name: Classes/BusinessLogic}
+- {name: Classes/Model}
+- {name: Classes/Presentation}
+- {name: Classes/Utils}
+
+# Business logic
+- {name: Classes/BusinessLogic/Common}
+
+# Model
+- {name: Classes/Model/Common}
+- {name: Classes/Model/Entity}
+- {name: Classes/Model/Entry}
+
+# Presentation
+- {name: Classes/Presentation/Common}
+- {name: Classes/Presentation/UserStories}
+
+# Utils
+- {name: Classes/Utils/Extensions}
+
+# Resources
+- {name: Resources/Assets}
+- {name: Resources/Colors}
+- {name: Resources/Fonts}
+
+# SupportingFiles
+- {name: SupportingFiles}
+
+#
+# Files
+#
+
+# ViperBase
+- {name: Classes/Presentation/Common/Viper/ViperModuleConfigurationBlockHolder.swift, path: Classes/Presentation/Common/Viper/ViperModuleConfigurationBlockHolder.swift.liquid}
+- {name: Classes/Presentation/Common/Viper/ViperModuleInput.swift, path: Classes/Presentation/Common/Viper/ViperModuleInput.swift.liquid}
+- {name: Classes/Presentation/Common/Viper/ViperModuleOutput.swift, path: Classes/Presentation/Common/Viper/ViperModuleOutput.swift.liquid}
+- {name: Classes/Presentation/Common/Viper/ViperModuleTransitionHandler.swift, path: Classes/Presentation/Common/Viper/ViperModuleTransitionHandler.swift.liquid}
+- {name: Classes/Presentation/Common/Viper/ViperModuleViewController.swift, path: Classes/Presentation/Common/Viper/ViperModuleViewController.swift.liquid}
+- {name: Classes/Presentation/Common/Viper/ViperModuleViewInput.swift, path: Classes/Presentation/Common/Viper/ViperModuleViewInput.swift.liquid}
+
+# Color
+- {name: Resources/Colors/ViperModuleConfigurationBlockHolder.swift, path: Resources/Colors/Colors.swift.liquid}
+
+# The declarations for test files
+test_files:

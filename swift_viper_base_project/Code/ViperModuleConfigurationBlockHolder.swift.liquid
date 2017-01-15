@@ -1,0 +1,19 @@
+//
+//  ViperModuleConfigurationBlockHolder.swift
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import Foundation
+
+/// Segue configuration block with Module Input parameter.
+typealias ConfigurationBlock = (ViperModuleInput) -> (ViperModuleOutput?)
+
+class ViperModuleConfigurationBlockHolder {
+    let configurationBlock: ConfigurationBlock?
+    init(configurationBlock: ConfigurationBlock?) {
+        self.configurationBlock = configurationBlock
+    }
+}
