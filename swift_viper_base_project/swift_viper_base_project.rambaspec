@@ -56,7 +56,7 @@ code_files:
 - {name: Classes/Presentation/Common/Viper/ViperModuleViewInput.swift, path: Code/Viper/ViperModuleViewInput.swift.liquid}
 
 # Resources
-- {name: Resources/Colors/ViperModuleConfigurationBlockHolder.swift, path: Code/Resources/Colors.swift.liquid}
+- {name: Resources/Colors/Color.swift, path: Code/Resources/Colors.swift.liquid}
 
 # The declarations for test files
 test_files:
