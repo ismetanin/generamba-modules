@@ -8,9 +8,9 @@
 
 import UIKit
 
-class {{ module_info.name }}ModuleConfigurator {
+final class {{ module_info.name }}ModuleConfigurator {
 
-    // MARK: Iternal Helpers
+    // MARK: Internal Helpers
 
     func configureModule<UIViewController>(forViewInput viewInput: UIViewController) {
         if let viewController = viewInput as? {{ module_info.name }}ViewController {
@@ -29,7 +29,9 @@ class {{ module_info.name }}ModuleConfigurator {
         presenter.router = router
         presenter.interactor = interactor
         interactor.output = presenter
+        router.viewController = viewController
         viewController.output = presenter
+        viewController.moduleInput = presenter
     }
 
 }
