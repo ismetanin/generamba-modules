@@ -9,7 +9,7 @@ license: "MIT"
 
 code_files:
 # Configurator
-- {name: ModuleConfigurator.swift, path: Code/module_configurator.swift.liquid}
+- {name: Configurator.swift, path: Code/configurator.swift.liquid}
 
 # Router layer
 - {name: Router.swift, path: Code/router.swift.liquid}
@@ -24,7 +24,7 @@ code_files:
 test_files:
 
 # Configurators tests
-- {name: ModuleConfiguratorTests.swift, path: Tests/module_configurator_tests.swift.liquid}
+- {name: ConfiguratorTests.swift, path: Tests/configurator_tests.swift.liquid}
 
 # Router tests
 - {name: RouterTests.swift, path: Tests/router_tests.swift.liquid}
