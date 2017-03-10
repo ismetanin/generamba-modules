@@ -12,7 +12,7 @@ import XCTest
 class {{ module_info.name }}ConfiguratorTests: XCTestCase {
 
     func testConfigureModule() {
-        let viewController = DeliveryAddressesListConfigurator().configure()
+        let viewController = {{ module_info.name }}ViewController.configure()
         XCTAssertNotNil(viewController.presenter, "presenter in {{ module_info.name }}ViewController is nil after configuration")
 
         let presenter = viewController.presenter!
