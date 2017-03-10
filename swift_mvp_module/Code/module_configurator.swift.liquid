@@ -1,0 +1,16 @@
+//
+//  {{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import Foundation
+
+final class {{ module_info.name }}Configurator: Configurator {
+    func configure() -> {{ module_info.name }}ViewController {
+        return BaseConfigurator.configure({ (view, router, presenter) in
+        })
+    }
+}
