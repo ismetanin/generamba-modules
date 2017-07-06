@@ -1,0 +1,29 @@
+//
+//  {{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import UIKit
+
+final class {{ module_info.name }}ScreenConfigurator {
+
+    // MARK: Internal methods
+
+    func configure(withParameter parameter: <#ParameterType#>) -> FirstScreenViewController {
+        let view = {{ module_info.name }}ViewController.controller()
+        let presenter = {{ module_info.name }}Presenter()
+        let router = {{ module_info.name }}Router()
+
+        presenter.view = view
+        presenter.router = router
+        router.view = view
+        view.output = presenter
+        presenter.configureModule(withParameter: parameter)
+
+        return view
+    }
+
+}

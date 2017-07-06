@@ -1,0 +1,25 @@
+//
+//  {{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import Foundation
+
+final class { module_info.name }}Router: { module_info.name }}RouterInput {
+
+	// MARK: Properties
+
+    weak var view: ModuleTransitionable?
+
+	// MARK: { module_info.name }}RouterInput
+
+    func show<#ScreenName#>Screen(withParameter parameter: <#ParameterType#>) {
+        let screen = SomeScreenConfigurator().configure(withParameter: parameter)
+        let navigationController = UINavigationController(rootViewController: screen)
+        view?.presentModule(navigationController, animated: true, completion: nil)
+    }
+
+}
