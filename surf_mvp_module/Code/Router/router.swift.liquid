@@ -8,13 +8,13 @@
 
 import Foundation
 
-final class { module_info.name }}Router: { module_info.name }}RouterInput {
+final class {{ module_info.name }}Router: {{ module_info.name }}RouterInput {
 
 	// MARK: Properties
 
     weak var view: ModuleTransitionable?
 
-	// MARK: { module_info.name }}RouterInput
+	// MARK: {{ module_info.name }}RouterInput
 
     func show<#ScreenName#>Screen(withParameter parameter: <#ParameterType#>) {
         let screen = SomeScreenConfigurator().configure(withParameter: parameter)
