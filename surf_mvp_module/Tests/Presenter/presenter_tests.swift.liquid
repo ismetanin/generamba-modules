@@ -9,11 +9,17 @@
 import XCTest
 @testable import {{ module_info.project_name  }}
 
-class {{ module_info.name }}PresenterTest: XCTestCase {
+final class {{ module_info.project_name  }}PresenterTest: XCTestCase {
+
+    private var presenter: {{ module_info.project_name  }}Presenter = {{ module_info.project_name  }}Presenter()
+    private var view: MockViewController = MockViewController()
 
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        presenter = {{ module_info.project_name  }}Presenter()
+        presenter.router = MockRouter()
+        view = MockViewController()
+        presenter.view = view
     }
 
     override func tearDown() {
@@ -21,18 +27,31 @@ class {{ module_info.name }}PresenterTest: XCTestCase {
         super.tearDown()
     }
 
-    class MockInteractor: {{ module_info.name }}InteractorInput {
-
+    func testShowScreen() {
+        presenter.router.showScreen(withParameter: <#Parameter#>)
+        XCTAssertTrue((presenter.router as! MockRouter).showScreenWasCalled)
     }
 
-    class MockRouter: {{ module_info.name }}RouterInput {
-
+    func testSetupInitialState() {
+        presenter.view.setupInitialState()
+        XCTAssertTrue((presenter.view as! MockViewController).setupInitialStateWasCalled)
     }
 
-    class MockViewController: {{ module_info.name }}ViewInput {
+    final class MockRouter: {{ module_info.project_name  }}RouterInput {
+        var showScreenWasCalled: Bool = false
 
-        func setupInitialState() {
-
+        /// Method for transition to other module with custom parameter
+        func showScreen(withParameter parameter: <#Parameter#>) {
+            showScreenWasCalled = true
         }
     }
+
+    final class MockViewController: {{ module_info.project_name  }}ViewInput {
+        var setupInitialStateWasCalled: Bool = false
+
+        func setupInitialState() {
+            setupInitialStateWasCalled = true
+        }
+    }
+
 }

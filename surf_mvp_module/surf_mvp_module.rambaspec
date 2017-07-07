@@ -29,7 +29,7 @@ code_files:
 test_files:
 
 # Configurators tests
-- {name: Configurator/ModuleConfiguratorTests.swift, path: Tests/Configurator/module_configurator_tests.swift.liquid}
+- {name: Configurator/ScreenConfiguratorTests.swift, path: Tests/Configurator/screen_configurator_tests.swift.liquid}
 
 # Router tests
 - {name: Router/RouterTests.swift, path: Tests/Router/router_tests.swift.liquid}

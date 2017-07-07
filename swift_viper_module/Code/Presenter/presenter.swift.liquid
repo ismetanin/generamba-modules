@@ -17,7 +17,7 @@ class {{ module_info.name }}Presenter: {{ module_info.name }}ModuleInput, {{ mod
     // MARK: {{ module_info.name }}ViewOutput
 
     func setupView() {
-    	self.view.showTitle(<#title#>.localized)
+    	self.view.setupInitialState()
     }
 
     // MARK: {{ module_info.name }}ModuleInput

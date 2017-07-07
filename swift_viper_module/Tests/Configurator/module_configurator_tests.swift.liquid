@@ -9,35 +9,23 @@
 import XCTest
 @testable import {{ module_info.project_name  }}
 
-class {{ module_info.name }}ModuleConfiguratorTests: XCTestCase {
+final class {{ module_info.name }}ScreenConfiguratorTests: XCTestCase {
 
-    func testConfigureModuleForViewController() {
+    func testConfigureScreen() {
+        // When
+        let viewController = {{ module_info.name }}ScreenConfigurator().configure(withParameter: <#Parameter#>)
 
-        //given
-        let viewController = {{ module_info.name }}ViewControllerMock()
-        let configurator = {{ module_info.name }}ModuleConfigurator()
-
-        //when
-        configurator.configureModule(forViewInput: viewController)
-
-        //then
+        // Then
         XCTAssertNotNil(viewController.output, "{{ module_info.name }}ViewController is nil after configuration")
-        XCTAssertTrue(viewController.output is {{ module_info.name }}Presenter, "output is not {{ module_info.name }}Presenter")
+        XCTAssertTrue(viewController.output is {{ module_info.name }}Presenter, "output is not { module_info.name }}Presenter")
 
         let presenter: {{ module_info.name }}Presenter = viewController.output as! {{ module_info.name }}Presenter
         XCTAssertNotNil(presenter.view, "view in {{ module_info.name }}Presenter is nil after configuration")
         XCTAssertNotNil(presenter.router, "router in {{ module_info.name }}Presenter is nil after configuration")
-        XCTAssertTrue(presenter.router is {{ module_info.name }}Router, "router is not {{ module_info.name }}Router")
+        XCTAssertTrue(presenter.router is {{ module_info.name }}Router, "router is not { module_info.name }}Router")
 
-        let interactor: {{ module_info.name }}Interactor = presenter.interactor as! {{ module_info.name }}Interactor
-        XCTAssertNotNil(interactor.output, "output in {{ module_info.name }}Interactor is nil after configuration")
+        let router: {{ module_info.name }}Router = presenter.router as! {{ module_info.name }}Router
+        XCTAssertTrue(router.view is {{ module_info.name }}ViewController, "view in router is not {{ module_info.name }}ViewController")
     }
 
-    class {{ module_info.name }}ViewControllerMock: {{ module_info.name }}ViewController {
-        var setupViewDidCall = false
-
-        override func setupInitialState() {
-            setupInitialStateDidCall = true
-        }
-    }
 }

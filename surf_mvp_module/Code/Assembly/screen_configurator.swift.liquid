@@ -12,7 +12,7 @@ final class {{ module_info.name }}ScreenConfigurator {
 
     // MARK: Internal methods
 
-    func configure(withParameter parameter: <#ParameterType#>) -> FirstScreenViewController {
+    func configure(withParameter parameter: <#ParameterType#>) -> {{ module_info.name }}ViewController {
         let view = {{ module_info.name }}ViewController.controller()
         let presenter = {{ module_info.name }}Presenter()
         let router = {{ module_info.name }}Router()

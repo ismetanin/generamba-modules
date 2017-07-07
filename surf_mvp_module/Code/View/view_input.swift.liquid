@@ -7,8 +7,6 @@
 //
 
 protocol {{ module_info.name }}ViewInput: class {
-    /// Method for show title string
-    /// 
-    /// parameter title: title string
-    func showTitle(_ title: String)
+    /// Method for setup initial state of view
+    func setupInitialState()
 }
