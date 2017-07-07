@@ -9,18 +9,13 @@
 import XCTest
 @testable import {{ module_info.project_name  }}
 
-class {{ module_info.name }}ModuleConfiguratorTests: XCTestCase {
+final class {{ module_info.name }}ModuleConfiguratorTests: XCTestCase {
 
-    func testConfigureModuleForViewController() {
+    func testConfigureScreen() {
+        // when
+        let viewController = {{ module_info.name }}ScreenConfigurator().configure(withParameter: <#Parameter#>)
 
-        //given
-        let viewController = {{ module_info.name }}ViewControllerMock()
-        let configurator = {{ module_info.name }}ModuleConfigurator()
-
-        //when
-        configurator.configureModule(forViewInput: viewController)
-
-        //then
+        // then
         XCTAssertNotNil(viewController.output, "{{ module_info.name }}ViewController is nil after configuration")
         XCTAssertTrue(viewController.output is {{ module_info.name }}Presenter, "output is not {{ module_info.name }}Presenter")
 
@@ -29,13 +24,9 @@ class {{ module_info.name }}ModuleConfiguratorTests: XCTestCase {
         XCTAssertNotNil(presenter.router, "router in {{ module_info.name }}Presenter is nil after configuration")
         XCTAssertTrue(presenter.router is {{ module_info.name }}Router, "router is not {{ module_info.name }}Router")
 
+        let router: {{ module_info.name }}Router = presenter.router as! {{ module_info.name }}Router
+        XCTAssertTrue(router.view is {{ module_info.name }}ViewController, "view in router is not {{ module_info.name }}ViewController")
     }
 
-    class {{ module_info.name }}ViewControllerMock: {{ module_info.name }}ViewController {
-        var setupViewDidCall = false
-
-        override func setupInitialState() {
-            setupInitialStateDidCall = true
-        }
-    }
 }
+

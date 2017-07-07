@@ -9,14 +9,14 @@
 import XCTest
 @testable import {{ module_info.project_name  }}
 
-final class {{ module_info.project_name  }}PresenterTest: XCTestCase {
+final class {{ module_info.name }}PresenterTest: XCTestCase {
 
-    private var presenter: {{ module_info.project_name  }}Presenter = {{ module_info.project_name  }}Presenter()
+    private var presenter: {{ module_info.name }}Presenter = {{ module_info.name }}Presenter()
     private var view: MockViewController = MockViewController()
 
     override func setUp() {
         super.setUp()
-        presenter = {{ module_info.project_name  }}Presenter()
+        presenter = {{ module_info.name }}Presenter()
         presenter.router = MockRouter()
         view = MockViewController()
         presenter.view = view
@@ -37,7 +37,7 @@ final class {{ module_info.project_name  }}PresenterTest: XCTestCase {
         XCTAssertTrue((presenter.view as! MockViewController).setupInitialStateWasCalled)
     }
 
-    final class MockRouter: {{ module_info.project_name  }}RouterInput {
+    final class MockRouter: {{ module_info.name }}RouterInput {
         var showScreenWasCalled: Bool = false
 
         /// Method for transition to other module with custom parameter
@@ -46,7 +46,7 @@ final class {{ module_info.project_name  }}PresenterTest: XCTestCase {
         }
     }
 
-    final class MockViewController: {{ module_info.project_name  }}ViewInput {
+    final class MockViewController: {{ module_info.name }}ViewInput {
         var setupInitialStateWasCalled: Bool = false
 
         func setupInitialState() {
