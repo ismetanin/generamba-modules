@@ -27,23 +27,12 @@ final class {{ module_info.name }}PresenterTest: XCTestCase {
         super.tearDown()
     }
 
-    func testShowScreen() {
-        presenter.router.showScreen(withParameter: <#Parameter#>)
-        XCTAssertTrue((presenter.router as! MockRouter).showScreenWasCalled)
-    }
-
     func testSetupInitialState() {
         presenter.view.setupInitialState()
         XCTAssertTrue((presenter.view as! MockViewController).setupInitialStateWasCalled)
     }
 
     final class MockRouter: {{ module_info.name }}RouterInput {
-        var showScreenWasCalled: Bool = false
-
-        /// Method for transition to other module with custom parameter
-        func showScreen(withParameter parameter: <#Parameter#>) {
-            showScreenWasCalled = true
-        }
     }
 
     final class MockViewController: {{ module_info.name }}ViewInput {

@@ -16,10 +16,4 @@ final class {{ module_info.name }}Router: {{ module_info.name }}RouterInput {
 
 	// MARK: {{ module_info.name }}RouterInput
 
-    func show<#ScreenName#>Screen(withParameter parameter: <#ParameterType#>) {
-        let screen = SomeScreenConfigurator().configure(withParameter: parameter)
-        let navigationController = UINavigationController(rootViewController: screen)
-        view?.presentModule(navigationController, animated: true, completion: nil)
-    }
-
 }

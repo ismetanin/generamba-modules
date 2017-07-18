@@ -13,7 +13,7 @@ final class {{ module_info.name }}ModuleConfiguratorTests: XCTestCase {
 
     func testConfigureScreen() {
         // when
-        let viewController = {{ module_info.name }}ScreenConfigurator().configure(withParameter: <#Parameter#>)
+        let viewController = {{ module_info.name }}ScreenConfigurator().configure()
 
         // then
         XCTAssertNotNil(viewController.output, "{{ module_info.name }}ViewController is nil after configuration")

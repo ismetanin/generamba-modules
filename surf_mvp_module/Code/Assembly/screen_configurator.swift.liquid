@@ -12,7 +12,7 @@ final class {{ module_info.name }}ScreenConfigurator {
 
     // MARK: Internal methods
 
-    func configure(withParameter parameter: <#ParameterType#>) -> {{ module_info.name }}ViewController {
+    func configure() -> {{ module_info.name }}ViewController {
         let view = {{ module_info.name }}ViewController.controller()
         let presenter = {{ module_info.name }}Presenter()
         let router = {{ module_info.name }}Router()
@@ -21,7 +21,6 @@ final class {{ module_info.name }}ScreenConfigurator {
         presenter.router = router
         router.view = view
         view.output = presenter
-        presenter.configureModule(withParameter: parameter)
 
         return view
     }
