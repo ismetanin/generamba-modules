@@ -27,8 +27,10 @@ final class {{ module_info.name }}PresenterTest: XCTestCase {
         super.tearDown()
     }
 
-    func testSetupInitialState() {
-        presenter.view.setupInitialState()
+    func testThatPresenterHandlesViewLoadedEvent() {
+        // when 
+        presenter.viewLoaded()
+        // then
         XCTAssertTrue((presenter.view as! MockViewController).setupInitialStateWasCalled)
     }
 
