@@ -8,17 +8,17 @@
 
 final class {{ module_info.name }}Presenter: {{ module_info.name }}ViewOutput, {{ module_info.name }}ModuleInput {
 
-    // MARK: Properties
+    // MARK: - Properties
 
     weak var view: {{ module_info.name }}ViewInput!
     var router: {{ module_info.name }}RouterInput!
 
-    // MARK: {{ module_info.name }}ViewOutput
+    // MARK: - {{ module_info.name }}ViewOutput
 
     func viewLoaded() {
         view.setupInitialState()
     }
 
-    // MARK: {{ module_info.name }}ModuleInput
+    // MARK: - {{ module_info.name }}ModuleInput
 
 }

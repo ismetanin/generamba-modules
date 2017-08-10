@@ -28,11 +28,8 @@ final class {{ module_info.name }}ViewTests: XCTestCase {
     }
 
     func testThatViewNotifiesPresenterOnDidLoad() {
-        // given
-
         // when
         self.view?.viewDidLoad()
-
         // then
         XCTAssert(self.output?.viewLoadedWasCalled == true)
     }
