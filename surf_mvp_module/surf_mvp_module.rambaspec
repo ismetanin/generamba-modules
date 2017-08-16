@@ -9,7 +9,7 @@ license: "MIT"
 
 code_files:
 # Configurator
-- {name: Assembly/ScreenConfigurator.swift, path: Code/Assembly/screen_configurator.swift.liquid}
+- {name: Configurator/ScreenConfigurator.swift, path: Code/Configurator/screen_configurator.swift.liquid}
 
 # Router layer
 - {name: Router/Router.swift, path: Code/Router/router.swift.liquid}
