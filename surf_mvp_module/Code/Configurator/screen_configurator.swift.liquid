@@ -13,7 +13,7 @@ final class {{ module_info.name }}ScreenConfigurator {
     // MARK: Internal methods
 
     func configure() -> {{ module_info.name }}ViewController {
-        let view = {{ module_info.name }}ViewController.controller()
+        let view = {{ module_info.name }}ViewController()
         let presenter = {{ module_info.name }}Presenter()
         let router = {{ module_info.name }}Router()
 
