@@ -9,7 +9,7 @@ license: "MIT"
 
 code_files:
 # Configurator
-- {name: Configurator/ScreenConfigurator.swift, path: Code/Configurator/screen_configurator.swift.liquid}
+- {name: Configurator/ModuleConfigurator.swift, path: Code/Configurator/module_configurator.swift.liquid}
 
 # Router layer
 - {name: Router/Router.swift, path: Code/Router/router.swift.liquid}
@@ -29,7 +29,7 @@ code_files:
 test_files:
 
 # Configurators tests
-- {name: Configurator/ScreenConfiguratorTests.swift, path: Tests/Configurator/screen_configurator_tests.swift.liquid}
+- {name: Configurator/ModuleConfiguratorTests.swift, path: Tests/Configurator/module_configurator_tests.swift.liquid}
 
 # Router tests
 - {name: Router/RouterTests.swift, path: Tests/Router/router_tests.swift.liquid}
