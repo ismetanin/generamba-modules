@@ -1,10 +1,14 @@
-### generamba-modules
+# generamba-modules
 
 This repository contains a list of [Generamba](https://github.com/rambler-digital-solutions/Generamba) templates.
 
 The detailed information about a template structure is available in [Generamba Wiki](https://github.com/rambler-digital-solutions/Generamba/wiki/Template-Structure).
 
-### List of templates
+## Requirements
+
+[Generamba](https://github.com/rambler-digital-solutions/Generamba) 1.3.0 or later.
+
+## List of templates
 
 * [Surf MVP module](https://github.com/ismetanin/generamba-modules/tree/master/surf_mvp_module) - generates a new module for **Surf MVP 2.0** architecture
 * [Swift MVP module](https://github.com/ismetanin/generamba-modules/tree/master/swift_mvp_module) - generates a new module for **MVP** architecture. **Deprecated use Surf MVP 2.0 instead!**
