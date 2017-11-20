@@ -11,6 +11,8 @@ import XCTest
 
 final class {{ module_info.name }}ModuleConfiguratorTests: XCTestCase {
 
+	// MARK: - Main tests
+
     func testThatScreenConfiguresCorrectly() {
         // when
         let viewController = {{ module_info.name }}ModuleConfigurator().configure()
@@ -19,12 +21,20 @@ final class {{ module_info.name }}ModuleConfiguratorTests: XCTestCase {
         XCTAssertNotNil(viewController.output, "{{ module_info.name }}ViewController is nil after configuration")
         XCTAssertTrue(viewController.output is {{ module_info.name }}Presenter, "output is not {{ module_info.name }}Presenter")
 
-        let presenter: {{ module_info.name }}Presenter = viewController.output as! {{ module_info.name }}Presenter
+        guard let presenter: {{ module_info.name }}Presenter = viewController.output as? {{ module_info.name }}Presenter else {
+            XCTFail("Cannot assign viewController.output as {{ module_info.name }}Presenter")
+            return
+        }
+
         XCTAssertNotNil(presenter.view, "view in {{ module_info.name }}Presenter is nil after configuration")
         XCTAssertNotNil(presenter.router, "router in {{ module_info.name }}Presenter is nil after configuration")
         XCTAssertTrue(presenter.router is {{ module_info.name }}Router, "router is not {{ module_info.name }}Router")
 
-        let router: {{ module_info.name }}Router = presenter.router as! {{ module_info.name }}Router
+        guard let router: {{ module_info.name }}Router = presenter.router as? {{ module_info.name }}Router else {
+            XCTFail("Cannot assign presenter.router as {{ module_info.name }}Router")
+            return
+        }
+
         XCTAssertTrue(router.view is {{ module_info.name }}ViewController, "view in router is not {{ module_info.name }}ViewController")
     }
 

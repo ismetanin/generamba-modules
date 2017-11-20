@@ -12,13 +12,13 @@ final class {{ module_info.name }}ViewController: UIViewController, {{ module_in
 
     // MARK: - Properties
 
-    var output: {{ module_info.name }}ViewOutput!
+    var output: {{ module_info.name }}ViewOutput?
 
     // MARK: - UIViewController
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        output.viewLoaded()
+        output?.viewLoaded()
     }
 
     // MARK: - {{ module_info.name }}ViewInput

@@ -10,13 +10,13 @@ final class {{ module_info.name }}Presenter: {{ module_info.name }}ViewOutput, {
 
     // MARK: - Properties
 
-    weak var view: {{ module_info.name }}ViewInput!
-    var router: {{ module_info.name }}RouterInput!
+    weak var view: {{ module_info.name }}ViewInput?
+    var router: {{ module_info.name }}RouterInput?
 
     // MARK: - {{ module_info.name }}ViewOutput
 
     func viewLoaded() {
-        view.setupInitialState()
+        view?.setupInitialState()
     }
 
     // MARK: - {{ module_info.name }}ModuleInput

@@ -11,28 +11,37 @@ import XCTest
 
 final class {{ module_info.name }}PresenterTest: XCTestCase {
 
-    private var presenter: {{ module_info.name }}Presenter = {{ module_info.name }}Presenter()
-    private var view: MockViewController = MockViewController()
+    // MARK: - Properties
+
+    private var presenter: {{ module_info.name }}Presenter?
+    private var view: MockViewController?
+
+    // MARK: - XCTestCase
 
     override func setUp() {
         super.setUp()
         presenter = {{ module_info.name }}Presenter()
-        presenter.router = MockRouter()
+        presenter?.router = MockRouter()
         view = MockViewController()
-        presenter.view = view
+        presenter?.view = view
     }
 
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
+        presenter = nil
+        view = nil
     }
+
+    // MARK: - Main tests
 
     func testThatPresenterHandlesViewLoadedEvent() {
         // when 
-        presenter.viewLoaded()
+        presenter?.viewLoaded()
         // then
-        XCTAssertTrue((presenter.view as! MockViewController).setupInitialStateWasCalled)
+        XCTAssertTrue((presenter?.view as? MockViewController)?.setupInitialStateWasCalled == true)
     }
+
+    // MARK: - Mocks
 
     final class MockRouter: {{ module_info.name }}RouterInput {
     }
