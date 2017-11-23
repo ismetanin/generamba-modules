@@ -13,6 +13,13 @@ final class {{ module_info.name }}ModuleConfiguratorTests: XCTestCase {
 
 	// MARK: - Main tests
 
+    func testThatViewControllerLoadsCorrectly() {
+        if UIStoryboard(name: String(describing: {{ module_info.name }}ViewController.self),
+                        bundle: Bundle.main).instantiateInitialViewController() == nil {
+            XCTFail("Can't load {{ module_info.name }}ViewController from storyboard, check that controller is initial view controller")
+        }
+    }
+
     func testThatScreenConfiguresCorrectly() {
         // when
         let viewController = {{ module_info.name }}ModuleConfigurator().configure()

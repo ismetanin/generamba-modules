@@ -21,7 +21,7 @@ code_files:
 
 # View layer
 - {name: View/ViewController.swift, path: Code/View/view_controller.swift.liquid}
-- {name: View/ViewController.xib, path: Code/View/view_controller.xib.liquid}
+- {name: View/ViewController.storyboard, path: Code/View/view_controller.storyboard.liquid}
 - {name: View/ViewInput.swift,  path: Code/View/view_input.swift.liquid}
 - {name: View/ViewOutput.swift, path: Code/View/view_output.swift.liquid}
 
