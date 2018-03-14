@@ -15,6 +15,7 @@ final class {{ module_info.name }}PresenterTest: XCTestCase {
 
     private var presenter: {{ module_info.name }}Presenter?
     private var view: MockViewController?
+    private var output: MockModuleOutput?
 
     // MARK: - XCTestCase
 
@@ -24,6 +25,8 @@ final class {{ module_info.name }}PresenterTest: XCTestCase {
         presenter?.router = MockRouter()
         view = MockViewController()
         presenter?.view = view
+        output = MockModuleOutput()
+        presenter?.output = output
     }
 
     override func tearDown() {
@@ -43,15 +46,19 @@ final class {{ module_info.name }}PresenterTest: XCTestCase {
 
     // MARK: - Mocks
 
-    final class MockRouter: {{ module_info.name }}RouterInput {
+    private final class MockRouter: {{ module_info.name }}RouterInput {
     }
 
-    final class MockViewController: {{ module_info.name }}ViewInput {
+    private final class MockViewController: {{ module_info.name }}ViewInput {
         var setupInitialStateWasCalled: Bool = false
 
         func setupInitialState() {
             setupInitialStateWasCalled = true
         }
+    }
+
+    private final class MockModuleOutput: {{ module_info.name }}ModuleOutput {
+
     }
 
 }

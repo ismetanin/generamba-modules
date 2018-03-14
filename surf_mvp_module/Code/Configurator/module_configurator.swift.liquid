@@ -12,7 +12,7 @@ final class {{ module_info.name }}ModuleConfigurator {
 
     // MARK: - Internal methods
 
-    func configure() -> {{ module_info.name }}ViewController {
+    func configure(output: {{ module_info.name }}ModuleOutput? = nil) -> {{ module_info.name }}ViewController {
         guard let view = UIStoryboard(name: String(describing: {{ module_info.name }}ViewController.self),
                                       bundle: Bundle.main).instantiateInitialViewController() as? {{ module_info.name }}ViewController else {
             fatalError("Can't load {{ module_info.name }}ViewController from storyboard, check that controller is initial view controller")
@@ -22,6 +22,7 @@ final class {{ module_info.name }}ModuleConfigurator {
 
         presenter.view = view
         presenter.router = router
+        presenter.output = output
         router.view = view
         view.output = presenter
 
