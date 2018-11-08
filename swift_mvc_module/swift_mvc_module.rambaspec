@@ -8,8 +8,4 @@ license: "MIT"
 # The declarations for code files
 code_files:
 - {name: View/ViewController.swift, path: Code/view_controller.swift.liquid}
-- {name: View/ViewController.xib, path: Code/view_controller.xib.liquid}
-
-# The declarations for test files
-test_files:
-- {name: View/ViewControllerTests.swift, path: Tests/view_controller_tests.swift.liquid}
+- {name: View/ViewController.storyboard, path: Code/view_controller.storyboard.liquid}
